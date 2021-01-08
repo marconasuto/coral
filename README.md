@@ -1,6 +1,6 @@
 # Coral - Telco customer churn analysis and prediction
-
-Churn rate is an essential parameter for evaluating a company.  To understand the financial issues caused by churning we can consider
+This project is about customer churn analysis and prediction for a fictional Telco company (IBM dataset).
+Churn rate is an essential parameter for evaluating a company. To understand the financial issues caused by churning we can consider
 
 1. The losses directly related to churning:
     - The revenue a company didn't earn for each year the customer was retained (customer lifetime value).
@@ -39,4 +39,4 @@ For these reasons, churn rate minimisation is a key factor for any company. With
     │   └── presentation.pdf       <- Non-technical presentation
     │
     │
-    └── requirements.txt           <- The requirements file for reproducing the analysis environment 
+    └── requirements.txt           <- The requirements file for reproducing the analysis environment
