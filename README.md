@@ -40,3 +40,79 @@ For these reasons, churn rate minimisation is a key factor for any company. With
     │
     │
     └── requirements.txt           <- The requirements file for reproducing the analysis environment
+
+## Methodology
+
+Before going into our recommendations based on our classification analysis, I’d like to briefly show you what’s behind them. The methodology we adopted is a quite standard one for any classification analysis. 
+
+-  **Business understanding**: The first step is Business Understanding. That’s where we get some domain knowledge, essential to read and understand the data and when we scope the problem. This is where we formulate the questions that will guide our analysis. 
+- The  steps follow the **OSEMN (Obtain - Scrub - Explore - Model - iNterpret)**
+
+## Business recommendations
+### Churned customer profile
+<a href="https://public.tableau.com/views/Coral_churn_prediction_analysis/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link"> <img src="data/images/Screenshot 2021-01-09 at 16.43.18.png"> </a>
+During our Exploratory data analysis we highlighted 3 main clusters/segments of churning customers. We created a dashboard as a tool for both marketing and strategic planning. Filtering by cluster we can make comparisons.
+
+Customers in cluster 1
+- They tend not to be SeniorCitizen
+- They spend less per month w.r.t. cluster 3, they churn soon
+- They don't use services
+
+Cluster 2
+- Half of them has multiple lines
+- They tend not to have partners and dependents
+- They tend to have a higher median value of SeniorCitizen w.r.t. Cluster==2 or 1
+- They spend quite a lot per month, they churn soon
+- They have month-to-month contract
+- They use fiber optic
+- They don't use OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport
+- They use StreamingMovies and StreamingTV more than cluster 2
+- They tend to use electronic payment methods, although less than cluster 0
+
+Cluster 3  could be profiled as “Tech-savy families”
+- They tend to have a higher median value of SeniorCitizen w.r.t. Cluster==2 or 1
+- They spend a lot per month, they churn late
+- They use all the services
+
+
+### Churning risk assessment of current customer base
+<a href="https://public.tableau.com/views/Coral_churn_prediction_analysis/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link"> <img src="data/images/Screenshot 2021-01-09 at 16.44.00.png"> </a>
+The following dashboard shows the actual customer base by risk level, applying our predictive model to our customer base. Each customer on the dashboard is identified by its reported gender. 
+
+The dimension of the icons is proportional to each customer's average total charges left.
+
+The quantity obtained for each customer, indicates how much money, on average, we can expect from each customer throughout his lifetime value (median tenure).
+
+Clicking on the filter to the right, will show the set of customers that are profitable to target.
+
+### Potential profits and ROI 
+<table>
+  <tr>
+    <th><img src="data/images/Potential profits from marketing campaign by labeling threshold - Conv. rate: 0.4.png" width="500" height="320"></th>
+    <th><img src="data/images/Potential ROIs from marketing campaign by labeling threshold - Conv. rate: 0.4.png" width="500" height="320"></th>
+    </tr>
+ </table>
+
+Assessing which customers are going to churn enables:
+- Planning actions to retain customers
+Set KPIs for retention
+
+ Key factors for marketing campaigning are:
+- knowing what the target audience is
+- Costs and CAC (cost per acqusition)
+- Potential revenues and ARPU (average reveues per user)
+- Potential profits and ROI (return on investment)
+Conversion rate
+
+The minimum conversion rate for profitable campaigning is around 40%.What is key, though, is what percentage of CAC we want to consider to calculate costs. Usually for retention campaign it's lower than the CAC. If we would consider lower CAC, we can expect lower conversion rates as KPIs.
+With a conv. rate of 40%, we can expect a max ROI of 36%.
+
+
+## Future works
+1. Longitudinal data, social media data
+2. Improving classifier performance
+3. Putting into production 
+
+Our churn analysis can’t highlight, i.e., why customers churned, what caused churning, how churning evolved. Also, understanding our customers would mean understanding how we could improve our offers, tailored them, depending on their profiles. For these reasons, we need longitudinal and social media data to enrich our customers profiles and strategic planning.
+Another focus point for future works is how to improve our classifier performance. Beyond acquiring enriched data, we would need adopting more advanced techniques, i.e. PCA, neural networks.
+Finally, for both marketing and strategic reasons, putting this tool into production would benefit all interested parties.
