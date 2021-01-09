@@ -1,5 +1,6 @@
 # Coral - Telco customer churn analysis and prediction
-This project is about customer churn analysis and prediction for a fictional Telco company (IBM dataset).
+This project is about customer churn analysis and prediction for a fictional telco company using IBM sample dataset.
+
 Churn rate is an essential parameter for evaluating a company. To understand the financial issues caused by churning we can consider
 
 1. The losses directly related to churning:
@@ -7,10 +8,8 @@ Churn rate is an essential parameter for evaluating a company. To understand the
     - The added revenue through upselling
     - The potential for referrals generated
 
-
 2. The losses indirectly related with churning:
-
-    - New customer acquisition costs due to lost revenues from retained customers: new customers cost on average 4 times the ARPU
+    - New customer acquisition costs due to lost revenues from retained customers: new customers cost on average 4 times the ARPU (Average Revenue Per User) 
     - Reputation in the market
 
 For these reasons, churn rate minimisation is a key factor for any company. With this analysis we would like to address **3 main questions**:
@@ -43,17 +42,17 @@ For these reasons, churn rate minimisation is a key factor for any company. With
 
 ## Methodology
 
-Before going into our recommendations based on our classification analysis, I’d like to briefly show you what’s behind them. The methodology we adopted is a quite standard one for any classification analysis. 
+The methodology adopted is a quite standard one for any classification analysis. 
 
--  **Business understanding**: The first step is Business Understanding. That’s where we get some domain knowledge, essential to read and understand the data and when we scope the problem. This is where we formulate the questions that will guide our analysis. 
-- The  steps follow the **OSEMN (Obtain - Scrub - Explore - Model - iNterpret)**
+-  **Business understanding**: The first step is Business Understanding, essential to read and understand the data and to scope the problem. This is where we formulate the questions that will guide our analysis. 
+- The next steps follow the **OSEMN (Obtain - Scrub - Explore - Model - iNterpret)**
 
 ## Business recommendations
 ### Churned customer profile
 <a href="https://public.tableau.com/views/Coral_churn_prediction_analysis/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link"> <img src="data/images/Screenshot 2021-01-09 at 16.43.18.png"> </a>
-During our Exploratory data analysis we highlighted 3 main clusters/segments of churning customers. We created a dashboard as a tool for both marketing and strategic planning. Filtering by cluster we can make comparisons.
+During our Exploratory data analysis we highlighted 3 main clusters/segments of churning customers. We created a dashboard as a tool for both marketing and strategic planning. We can make comparisons filtering by clusters:
 
-Customers in cluster 1
+Cluster 1
 - They tend not to be SeniorCitizen
 - They spend less per month w.r.t. cluster 3, they churn soon
 - They don't use services
@@ -69,7 +68,7 @@ Cluster 2
 - They use StreamingMovies and StreamingTV more than cluster 2
 - They tend to use electronic payment methods, although less than cluster 0
 
-Cluster 3  could be profiled as “Tech-savy families”
+Cluster 3 - could be profiled as “Tech-savy families”
 - They tend to have a higher median value of SeniorCitizen w.r.t. Cluster==2 or 1
 - They spend a lot per month, they churn late
 - They use all the services
@@ -77,11 +76,11 @@ Cluster 3  could be profiled as “Tech-savy families”
 
 ### Churning risk assessment of current customer base
 <a href="https://public.tableau.com/views/Coral_churn_prediction_analysis/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link"> <img src="data/images/Screenshot 2021-01-09 at 16.44.00.png"> </a>
-The following dashboard shows the actual customer base by risk level, applying our predictive model to our customer base. Each customer on the dashboard is identified by its reported gender. 
+The dashboard above shows the actual customer base by risk level, applying our predictive model. Each customer on the dashboard is identified by its reported gender. 
 
 The dimension of the icons is proportional to each customer's average total charges left.
 
-The quantity obtained for each customer, indicates how much money, on average, we can expect from each customer throughout his lifetime value (median tenure).
+The quantity obtained for each customer, indicates how much money, on average, we can expect from each customer throughout his lifetime (median tenure).
 
 Clicking on the filter to the right, will show the set of customers that are profitable to target.
 
@@ -95,17 +94,17 @@ Clicking on the filter to the right, will show the set of customers that are pro
 
 Assessing which customers are going to churn enables:
 - Planning actions to retain customers
-Set KPIs for retention
+- Set KPIs for retention
 
- Key factors for marketing campaigning are:
-- knowing what the target audience is
-- Costs and CAC (cost per acqusition)
-- Potential revenues and ARPU (average reveues per user)
-- Potential profits and ROI (return on investment)
-Conversion rate
+Key factors for marketing campaigning are:
+- Knowing what the target audience is
+- Costs and CAC (Cost per ACqusition)
+- Potential revenues and ARPU (Average Reveues Per User)
+- Potential profits and ROI (Return On Investment)
+- Conversion rate
 
-The minimum conversion rate for profitable campaigning is around 40%.What is key, though, is what percentage of CAC we want to consider to calculate costs. Usually for retention campaign it's lower than the CAC. If we would consider lower CAC, we can expect lower conversion rates as KPIs.
-With a conv. rate of 40%, we can expect a max ROI of 36%.
+We assessed that the minimum conversion rate for profitable campaigning is around 40%. What is key, though, is what percentage of CAC we want to consider to calculate costs. Usually for retention campaign it's lower than the CAC. If we would consider lower our CAC, we can expect lower conversion rates as KPIs.
+In the images above we assumed a max marketing cap per user during a retention campaign equals to the CAC. We estimated that with a conv. rate of 40%, we can expect a max ROI of 36%.
 
 
 ## Future works
