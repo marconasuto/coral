@@ -1,4 +1,7 @@
 # Coral - Telco customer churn analysis and prediction
+[Blog post/mini-website:Coral ](https://coral.marconasuto.com/)
+
+
 This project is about customer churn analysis and prediction for a fictional telco company using IBM sample dataset.
 
 Churn rate is an essential parameter for evaluating a company. To understand the financial issues caused by churning we can consider
